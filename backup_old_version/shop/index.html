@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help2type Shop - Bestellen</title>
+    <meta name="description" content="help2type Shop: Produkte rund um die haptische Smartphone-Tastatur.">
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../images/logo.svg" alt="help2type Logo">
+                    </a>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../produkte/index.html">Produkte</a></li>
+                        <li><a href="../unternehmen/index.html">Unternehmen</a></li>
+                        <li><a href="../tutorials/index.html">Tutorials</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="index.html" class="btn-shop active">Jetzt bestellen</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Header -->
+    <section class="shop-header">
+        <div class="container">
+            <img src="../images/h2t_HeaderbildShop2v2.png" alt="help2type Shop Header" class="header-image">
+            <h1>help2type Shop</h1>
+            <p class="subtitle">Sicherer tippen – mit fühlbaren Tasten am Smartphone</p>
+            <p class="description">help2type ergänzt dein Smartphone um eine kompakte Hardware-Tastatur. Die Verbindung läuft per Bluetooth, die Befestigung ist flexibel, und das Layout orientiert sich an einer Laptop-Tastatur. So gelingen längere Texte schneller und mit weniger Fehlern – auf iOS und Android.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>help2type Shop</h2>
+            
+            <div class="products-grid">
+                <!-- Bundle Product -->
+                <div class="product-card featured">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image">
+                        <img src="../images/bundle.jpg" alt="help2type Bundle">
+                    </div>
+                    <div class="product-info">
+                        <h3>help2type Bundle</h3>
+                        <p class="product-description">(Tastatur, Schutztasche, Zusatzplatte)</p>
+                        <div class="price-wrapper">
+                            <span class="old-price">Regulär CHF 219</span>
+                            <span class="current-price">CHF 149.00</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('bundle')">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Keyboard Product -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/keyboard.jpg" alt="help2type Tastatur">
+                    </div>
+                    <div class="product-info">
+                        <h3>help2type Tastatur</h3>
+                        <p class="product-description">(regulär CHF 199.-)</p>
+                        <div class="price-wrapper">
+                            <span class="current-price">CHF 129.00</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('keyboard')">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Case Product -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/case.jpg" alt="help2type Schutztasche">
+                    </div>
+                    <div class="product-info">
+                        <h3>help2type Schutztasche</h3>
+                        <p class="product-description">&nbsp;</p>
+                        <div class="price-wrapper">
+                            <span class="current-price">CHF 29.00</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('case')">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <!-- Extra Plate Product -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../images/plate.jpg" alt="help2type Zusatzplatte">
+                    </div>
+                    <div class="product-info">
+                        <h3>help2type Zusatzplatte</h3>
+                        <p class="product-description">(für die Nutzung auf einem weiteren Smartphone)</p>
+                        <div class="price-wrapper">
+                            <span class="current-price">CHF 9.00</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart('plate')">In den Warenkorb</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary" id="cartSummary" style="display: none;">
+                <h3>Warenkorb</h3>
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <strong>Total: <span id="cartTotal">CHF 0.00</span></strong>
+                </div>
+                <button class="btn btn-checkout">Zur Kasse</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Produktmerkmale</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">&nbsp;</div>
+                    <h3>Kompatibel</h3>
+                    <p>Funktioniert mit Apple & Android Geräten</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&nbsp;</div>
+                    <h3>Bluetooth</h3>
+                    <p>Kabellose Verbindung via Bluetooth</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&nbsp;</div>
+                    <h3>QWERTZ Layout</h3>
+                    <p>Bekanntes Tastatur-Layout</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">&nbsp;</div>
+                    <h3>7 Sprachen</h3>
+                    <p>Unterstützt 7 verschiedene Sprachen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Roeschs help2type</strong></p>
+                    <p>Frutigenstrasse 28</p>
+                    <p>3600 Thun, Switzerland</p>
+                    <p><a href="mailto:info@help2type.com">info@help2type.com</a></p>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4>Links</h4>
+                    <a href="../impressum.html">Impressum</a>
+                    <a href="../docs/agb_help2type_de.pdf" target="_blank">Rechtliches</a>
+                    <a href="../datenschutz.html">Datenschutz</a>
+                </div>
+
+                <div class="footer-language">
+                    <a href="index.html" class="active">DE</a>
+                    <a href="en/index.html">EN</a>
+                </div>
+            </div>
+
+            <div class="footer-swissness">
+                <svg xmlns="http://www.w3.org/2000/svg" width="149" height="58" style="margin-bottom: 20px;"><g transform="translate(1 1)" fill="none" fill-rule="evenodd"><circle fill="#FFF" fill-rule="nonzero" cx="10.5" cy="4.5" r="4.5"></circle><circle stroke="#FFF" cx="39.5" cy="4.5" r="4.5"></circle><circle stroke="#FFF" cx="115.5" cy="4.5" r="4.5"></circle><circle fill="#FFF" fill-rule="nonzero" cx="143.5" cy="4.5" r="4.5"></circle><circle stroke="#FFF" cx="4.5" cy="51.5" r="4.5"></circle><circle stroke="#FFF" cx="32.5" cy="51.5" r="4.5"></circle><circle fill="#FFF" fill-rule="nonzero" cx="108.5" cy="51.5" r="4.5"></circle><circle stroke="#FFF" cx="137.5" cy="51.5" r="4.5"></circle><circle fill="#FFF" fill-rule="nonzero" cx="7.5" cy="28.5" r="4.5"></circle><circle fill="#FFF" fill-rule="nonzero" cx="36.5" cy="28.5" r="4.5"></circle><circle fill="#FFF" fill-rule="nonzero" cx="112.5" cy="28.5" r="4.5"></circle><circle fill="#FFF" fill-rule="nonzero" cx="140.5" cy="28.5" r="4.5"></circle><path d="M88.742 56H53l1.052-6.715 22.738-22.04c4.234-4.174 6.564-7.955 6.99-11.344.325-2.403-.076-4.408-1.205-6.013-1.13-1.606-2.82-2.458-5.071-2.557-2.782-.101-5.125.778-7.028 2.636-1.903 1.859-3.055 4.393-3.458 7.603l-8.87.038c.251-3.389 1.271-6.436 3.061-9.142C63 5.76 65.38 3.654 68.35 2.149 71.318.645 74.533-.07 77.995.005c4.76.101 8.526 1.492 11.295 4.173s3.988 6.273 3.658 10.775c-.426 5.159-3.496 10.609-9.208 16.35l-2.33 2.314-15.82 15.024h24.317L88.742 56Z" fill="#FFF" fill-rule="nonzero"></path></g></svg>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-language">
+                    <span class="language-current">DE</span>
+                    <span class="language-divider">|</span>
+                    <a href="#" class="language-link">EN</a>
+                    <span class="language-divider">|</span>
+                    <a href="#" class="language-link">FR</a>
+                </div>
+                <p>&copy; help2type 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklären Sie sich damit einverstanden, dass wir Cookies verwenden.</p>
+            <a href="../datenschutz.html" class="cookie-link">Datenschutzerklärung</a>
+        </div>
+        <button id="acceptCookies" class="cookie-btn">Einverstanden</button>
+    </div>
+
+    <!-- Check cookies immediately on page load -->
+    <script>
+        (function() {
+            const cookieConsent = localStorage.getItem('cookieConsent');
+            const banner = document.getElementById('cookieBanner');
+            if (cookieConsent === 'accepted' && banner) {
+                banner.classList.add('hidden');
+            } else if (!cookieConsent && banner) {
+                banner.classList.remove('hidden');
+            }
+        })();
+    </script>
+
+    <script src="../js/shop.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/language.js"></script>
+</body>
+</html>

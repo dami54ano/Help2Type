@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" preserveAspectRatio="xMidYMid meet">
+  <!-- Keyboard icon -->
+  <g>
+    <!-- Keyboard outline -->
+    <rect x="8" y="12" width="50" height="38" rx="2" fill="none" stroke="white" stroke-width="1.5"/>
+    <!-- Keys row 1 -->
+    <rect x="11" y="15" width="4" height="4" fill="white"/>
+    <rect x="18" y="15" width="4" height="4" fill="white"/>
+    <rect x="25" y="15" width="4" height="4" fill="white"/>
+    <rect x="32" y="15" width="4" height="4" fill="white"/>
+    <rect x="39" y="15" width="4" height="4" fill="white"/>
+    <!-- Keys row 2 -->
+    <rect x="11" y="23" width="4" height="4" fill="white"/>
+    <rect x="18" y="23" width="4" height="4" fill="white"/>
+    <rect x="25" y="23" width="4" height="4" fill="white"/>
+    <rect x="32" y="23" width="4" height="4" fill="white"/>
+    <rect x="39" y="23" width="4" height="4" fill="white"/>
+    <!-- Keys row 3 -->
+    <rect x="11" y="31" width="4" height="4" fill="white"/>
+    <rect x="18" y="31" width="4" height="4" fill="white"/>
+    <rect x="25" y="31" width="4" height="4" fill="white"/>
+    <rect x="32" y="31" width="4" height="4" fill="white"/>
+    <rect x="39" y="31" width="4" height="4" fill="white"/>
+  </g>
+  
+  <!-- Text "help2type" -->
+  <text x="70" y="42" font-size="32" font-weight="700" fill="white" font-family="Arial, sans-serif" letter-spacing="-0.5">help2type</text>
+</svg>
