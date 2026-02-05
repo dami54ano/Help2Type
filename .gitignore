@@ -3,3 +3,8 @@ DOCUMENTATION.md
 DOCUMENTATION_NEW.md
 ictsheldon.md
 README.md
+*.md
+
+# Backup folders
+backup_*/
+backup_old_version/
