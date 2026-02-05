@@ -2,6 +2,16 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 
+# Redirect root to /de/
+RewriteRule ^$ /de/ [R=302,L]
+
+# Redirect pages without language folder to /de/
+RewriteCond %{REQUEST_URI} !^/(de|en|fr|images|css|js|favicon\.png|.*\.pdf|.*\.docx)/
+RewriteCond %{REQUEST_URI} !^/(de|en|fr)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ /de/$1 [R=302,L]
+
 # Force redirect if someone directly requests index.html
 RewriteCond %{REQUEST_URI} ^/(.*/)?index\.html$ [NC]
 RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
