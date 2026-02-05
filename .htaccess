@@ -2,6 +2,10 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 
+# Redirect pages without language prefix to /de/
+RewriteCond %{REQUEST_URI} ^/(marcel|produkte|unternehmen|tutorials|blog|agb|datenschutz|impressum)(\.html)?$ [NC]
+RewriteRule ^(.+?)(\.html)?$ /de/$1 [R=302,L]
+
 # Force redirect if someone directly requests index.html
 RewriteCond %{REQUEST_URI} ^/(.*/)?index\.html$ [NC]
 RewriteRule ^(.*/)?index\.html$ /%1 [R=301,L]
